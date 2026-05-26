@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC.TIME - Insumos Informáticos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>PC.TIME</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#resenas">Opiniones</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="inicio">
+            <h2>Bienvenidos a PC.TIME</h2>
+            <p>Tu tienda de confianza para armar tu setup ideal. Encontrá los mejores componentes y periféricos al mejor precio.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=c1ruWE0dY1M" title=" Tienda PC" frameborder="0" allowfullscreen></iframe>
+        </section>
+
+        <section id="productos">
+            <h2>Nuestros Productos</h2>
+            <div class="contenedor-flex">
+                <article class="tarjeta-producto">
+                    <h3>Mouse Gamer RGB</h3>
+                    <p>Precio: $15.000</p>
+                    <button>Comprar</button>
+                </article>
+                <article class="tarjeta-producto">
+                    <h3>Teclado Mecánico</h3>
+                    <p>Precio: $35.000</p>
+                    <button>Comprar</button>
+                </article>
+                <article class="tarjeta-producto">
+                    <h3>Monitor 24" FullHD</h3>
+                    <p>Precio: $120.000</p>
+                    <button>Comprar</button>
+                </article>
+            </div>
+        </section>
+
+        <section id="resenas">
+            <h2>¿Qué dicen nuestros clientes?</h2>
+            <div class="contenedor-grid">
+                <div class="tarjeta-resena">
+                    <p>"Excelente atención y el mouse llegó rapidísimo. Recomendados."</p>
+                    <span>- Juan Pérez</span>
+                </div>
+                <div class="tarjeta-resena">
+                    <p>"El teclado mecánico funciona de 10. Muy buena calidad."</p>
+                    <span>- María L.</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form action="https://formspree.io/f/xdajplbo" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 PC.TIME - Todos los derechos reservados.</p>
+    </footer>
+
+   
+</body>
+</html>

@@ -1,0 +1,221 @@
+/* Fuente de google y config. gral */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f6; /* fondo pagina claro */
+    color: #333;
+}
+
+/* estilos de header y navegacion */
+header {
+    background-color: #1e293b; /* Fondo azul  para pctime */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Lista de navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #38bdf8; /* Azul en los enlaces */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #1e293b;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* Prop. de fondo en las seccion con degradado*/
+
+#inicio {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#inicio h2 {
+    margin-bottom: 15px;
+}
+
+#inicio p {
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+}
+
+/* diseño del video de YTube */
+iframe {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* estilo base para para las demas secciones */
+section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1e293b;
+}
+
+/* principio: título en blanco */
+#inicio h2 {
+    color: white;
+}
+
+
+/* ==========================================================================
+   ========================================================================== */
+
+/* PRUEBA CON FLEXBOX */
+.contenedor-flex {
+    display: flex;       /* Activa Flexbox?? */
+    flex-wrap: wrap;     /* DESLIZADO */
+    gap: 20px;           /* Separación entre tarjetas */
+    justify-content: center; /* Centrado de tarjetas */
+}
+
+.tarjeta-producto {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;        /* Anchos de las tarjetAS */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.tarjeta-producto h3 {
+    margin-bottom: 10px;
+    color: #1e293b;
+}
+
+.tarjeta-producto p {
+    color: #0284c7;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.tarjeta-producto button {
+    background-color: #38bdf8;
+    color: #1e293b;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tarjeta-producto button:hover {
+    background-color: #0ea5e9;
+}
+
+/* PRUEba del Grid */
+.contenedor-grid {
+    display: grid;       /* Activa el CSS Grid ??? */
+    
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta-resena {
+    background-color: #ffffff;
+    border-left: 4px solid #38bdf8; /* borde con color al costado */
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.tarjeta-resena span {
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
+    color: #64748b;
+}
+
+/* test de form y media queries */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    max-width: 500px;
+    margin: 0 auto;     /* Centrad del formulario */
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+form button {
+    width: 100%;        /* Botón del ancho  */
+    background-color: #1e293b;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #334155;
+}
+
+/* aca test de la Media Query: para que se vea bien en los celus */
+@media (max-width: 600px) {
+    form {
+        width: 100%;    /* <-hacer que se ajuste a los celus */
+        padding: 15px;
+    }
+    
+    #inicio h2 {
+        font-size: 1.5rem; /* ver para achicar un poco el título en celus */
+    }
+}

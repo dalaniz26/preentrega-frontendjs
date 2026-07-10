@@ -1,5 +1,4 @@
 /* Fuente de google y config. gral */
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 * {
@@ -17,7 +16,7 @@ body {
 
 /* estilos de header y navegacion */
 header {
-    background-color: #1e293b; /* Fondo azul  para pctime */
+    background-color: #1e293b; /* Fondo azul para pctime */
     color: #ffffff;
     padding: 20px;
     text-align: center;
@@ -57,7 +56,6 @@ footer {
 }
 
 /* Prop. de fondo en las seccion con degradado*/
-
 #inicio {
     background: linear-gradient(135deg, #0f172a, #1e293b);
     color: white;
@@ -66,6 +64,7 @@ footer {
 }
 
 #inicio h2 {
+    color: white;
     margin-bottom: 15px;
 }
 
@@ -93,16 +92,10 @@ section h2 {
     color: #1e293b;
 }
 
-/* principio: título en blanco */
-#inicio h2 {
-    color: white;
-}
-
-
 /* ==========================================================================
    ========================================================================== */
 
-/* PRUEBA CON FLEXBOX */
+/* PRUEBA CON EL FLEXBOX */
 .contenedor-flex {
     display: flex;       /* Activa Flexbox?? */
     flex-wrap: wrap;     /* DESLIZADO */
@@ -148,7 +141,6 @@ section h2 {
 /* PRUEba del Grid */
 .contenedor-grid {
     display: grid;       /* Activa el CSS Grid ??? */
-    
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
 }
@@ -208,6 +200,51 @@ form button:hover {
     background-color: #334155;
 }
 
+/* Estilos para la zona del carrito que metimos con JS */
+#carrito-seccion {
+    background-color: #ffffff !important;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    max-width: 600px;
+    margin: 30px auto !important;
+}
+
+#items-carrito div {
+    background: #f8fafc;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+#items-carrito button {
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+#items-carrito .btn-restar:hover {
+    background: #cbd5e1;
+}
+
+#items-carrito .btn-eliminar:hover {
+    background: #c0392b !important;
+}
+
+.total-zona button {
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.total-zona #vaciar-carrito:hover {
+    background: #c0392b !important;
+}
+
+.total-zona #simular-compra:hover {
+    background: #27ae60 !important;
+}
+
 /* aca test de la Media Query: para que se vea bien en los celus */
 @media (max-width: 600px) {
     form {
@@ -217,5 +254,14 @@ form button:hover {
     
     #inicio h2 {
         font-size: 1.5rem; /* ver para achicar un poco el título en celus */
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    header {
+        padding: 10px;
     }
 }

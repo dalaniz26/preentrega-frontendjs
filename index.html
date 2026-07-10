@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PC.TIME - Insumos Informáticos</title>
+    <!-- Google Fonts que pide la consigna -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tu ruta de estilos original respetada -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -16,6 +21,8 @@
                 <li><a href="#productos">Productos</a></li>
                 <li><a href="#resenas">Opiniones</a></li>
                 <li><a href="#contacto">Contacto</a></li>
+                <!-- Contador de productos en el menú -->
+                <li style="margin-left: 20px; color: #fff;">🛒 Carrito: <span id="contador-carrito">0</span></li>
             </ul>
         </nav>
     </header>
@@ -25,28 +32,28 @@
         <section id="inicio">
             <h2>Bienvenidos a PC.TIME</h2>
             <p>Tu tienda de confianza para armar tu setup ideal. Encontrá los mejores componentes y periféricos al mejor precio.</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/g3I_7V_A_r0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/gLER-rL13vw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </section>
 
+        <!-- Sección de Productos dinámicos -->
         <section id="productos">
             <h2>Nuestros Productos</h2>
-            <div class="contenedor-flex">
-                <article class="tarjeta-producto">
-                    <h3>Mouse Gamer RGB</h3>
-                    <p>Precio: $15.000</p>
-                    <button>Comprar</button>
-                </article>
-                <article class="tarjeta-producto">
-                    <h3>Teclado Mecánico</h3>
-                    <p>Precio: $35.000</p>
-                    <button>Comprar</button>
-                </article>
-                <article class="tarjeta-producto">
-                    <h3>Monitor 24" FullHD</h3>
-                    <p>Precio: $120.000</p>
-                    <button>Comprar</button>
-                </article>
+            <div id="contenedor-productos" class="contenedor-flex">
+                <p>Cargando productos desde la API...</p>
+            </div>
+        </section>
+
+        <!-- Sección del Carrito de Compras -->
+        <section id="carrito-seccion" style="padding: 20px; background: #f4f4f4; margin: 20px 0; border-radius: 8px;">
+            <h2>Tu Carrito</h2>
+            <div id="items-carrito">
+                <!-- JS meterá los productos acá -->
+                <p style="color: #666;">El carrito está vacío.</p>
+            </div>
+            <div class="total-zona" style="margin-top: 15px;">
+                <h3>Total: $<span id="total-precio">0</span></h3>
+                <button id="vaciar-carrito" style="padding: 10px; background: #e74c3c; color: white; border: none; cursor: pointer; margin-right: 10px;">Vaciar Carrito</button>
+                <button id="simular-compra" style="padding: 10px; background: #2ecc71; color: white; border: none; cursor: pointer;">Finalizar Compra</button>
             </div>
         </section>
 
@@ -86,6 +93,7 @@
         <p>&copy; 2026 PC.TIME - Todos los derechos reservados.</p>
     </footer>
 
-   
+    <!-- Archivo JS al final del body -->
+    <script src="script.js"></script>
 </body>
 </html>
